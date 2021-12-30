@@ -16,7 +16,7 @@ main {
 	height: 100vh;
 	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 10% 80% 10%;
+	grid-template-columns: 4% 92% 4%;
 	grid-template-rows: 1fr;
 }
 
@@ -59,11 +59,41 @@ a {
 	align-content: center;
 	text-decoration: none;
 	color: white;
-	margin: 5px 0px;
+	margin: 8px 0px;
 	padding: 15px 4px;
 	border: solid 2px;
 	width: 25rem;
 	font-size: 1.5em;
+}
+
+@media screen and (max-width: 570px) {
+	main {
+		grid-template-columns: 1% 98% 1%;
+	}
+	h1,
+	p {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	h1 {
+		font-size: 2.7rem;
+	}
+
+	a {
+		width: 20rem;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+
+	a {
+		width: 18rem;
+	}
 }
 
 /* code {
