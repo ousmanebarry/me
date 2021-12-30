@@ -1,9 +1,17 @@
+:root {
+	--website: #043aa5;
+	--github: #bbbbbb;
+	--linkedin: #0077c2;
+	--mail: #bb001b;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #282c34;
+	/* background-color: #282c34; */
+	background-color: #111;
 	margin: 0;
 	padding: 0;
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,6 +26,22 @@ main {
 	display: grid;
 	grid-template-columns: 4% 92% 4%;
 	grid-template-rows: 1fr;
+}
+
+img {
+	border-radius: 50%;
+	width: 96px;
+	height: 96px;
+	object-fit: contain;
+	object-position: initial;
+	filter: none;
+	border: solid 2px var(--website);
+}
+
+.prof-pic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 h1,
@@ -64,6 +88,79 @@ a {
 	border: solid 2px;
 	width: 25rem;
 	font-size: 1.5em;
+}
+
+.Website {
+	border: solid 2px var(--website);
+	background-color: var(--website);
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	color: inherit;
+	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+.Github {
+	border: solid 2px var(--github);
+	background-color: var(--github);
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	color: inherit;
+	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+.LinkedIn {
+	border: solid 2px var(--linkedin);
+	background-color: var(--linkedin);
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	color: inherit;
+	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+.Mail {
+	border: solid 2px var(--mail);
+	background-color: var(--mail);
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	white-space: normal;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	color: inherit;
+	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+
+.Website:hover {
+	background-color: var(--website);
+}
+
+.Github:hover {
+	background-color: var(--github);
+}
+
+.LinkedIn:hover {
+	background-color: var(--linkedin);
+}
+
+.Mail:hover {
+	background-color: var(--mail);
 }
 
 @media screen and (max-width: 570px) {
