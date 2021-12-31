@@ -5,10 +5,6 @@
 	--mail: #bb001b;
 }
 
-* {
-	box-sizing: border-box;
-}
-
 body {
 	background-color: #111;
 	margin: 0;
@@ -92,10 +88,6 @@ a {
 .Website {
 	border: solid 4px var(--website);
 	background-color: var(--website);
-	overflow-wrap: break-word;
-	word-break: break-word;
-	hyphens: auto;
-	white-space: normal;
 	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
 	color: inherit;
 	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
@@ -106,10 +98,6 @@ a {
 .Github {
 	border: solid 4px var(--github);
 	background-color: var(--github);
-	overflow-wrap: break-word;
-	word-break: break-word;
-	hyphens: auto;
-	white-space: normal;
 	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
 	color: inherit;
 	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
@@ -120,10 +108,6 @@ a {
 .LinkedIn {
 	border: solid 4px var(--linkedin);
 	background-color: var(--linkedin);
-	overflow-wrap: break-word;
-	word-break: break-word;
-	hyphens: auto;
-	white-space: normal;
 	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
 	color: inherit;
 	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
@@ -134,10 +118,6 @@ a {
 .Mail {
 	border: solid 4px var(--mail);
 	background-color: var(--mail);
-	overflow-wrap: break-word;
-	word-break: break-word;
-	hyphens: auto;
-	white-space: normal;
 	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
 	color: inherit;
 	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
@@ -189,11 +169,3 @@ a {
 		font-size: 2.4rem;
 	}
 }
-
-/* code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-} */

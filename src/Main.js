@@ -7,9 +7,15 @@ const Main = () => {
 			<div className='main'>
 				<div className='col1'>
 					{data.map((datum) => {
-						const { name, link, target, rel } = datum;
+						const { id, name, link, target, rel } = datum;
 						return (
-							<a className={name} href={link} target={target} rel={rel}>
+							<a
+								key={id}
+								className={name}
+								href={link}
+								target={target}
+								rel={rel}
+							>
 								{name}
 							</a>
 						);
