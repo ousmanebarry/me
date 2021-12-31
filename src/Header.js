@@ -5,6 +5,7 @@ const Header = () => {
 		<>
 			<div className='prof-pic'>
 				<img
+					className='img'
 					src='https://avatars.githubusercontent.com/u/79618101?v=4'
 					alt=''
 				/>
