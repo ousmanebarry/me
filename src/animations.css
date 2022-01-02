@@ -7,35 +7,39 @@
 }
 
 .Random {
-	border: solid 4px #ffd700;
+	border: solid 4px var(--featured);
+	transition: 0.3s;
 }
 
 .Random:hover {
-	background-color: #ffd700;
+	background-color: var(--featured);
 }
 
 .Wiki {
-	border: solid 4px #ffd700;
+	border: solid 4px var(--featured);
+	transition: 0.3s;
 }
 
 .Wiki:hover {
-	background-color: #ffd700;
+	background-color: var(--featured);
 }
 
 .Akinator {
-	border: solid 4px #ffd700;
+	border: solid 4px var(--featured);
+	transition: 0.3s;
 }
 
 .Akinator:hover {
-	background-color: #ffd700;
+	background-color: var(--featured);
 }
 
 .Typeracer {
-	border: solid 4px #ffd700;
+	border: solid 4px var(--featured);
+	transition: 0.3s;
 }
 
 .Typeracer:hover {
-	background-color: #ffd700;
+	background-color: var(--featured);
 }
 
 .Github:hover {
@@ -52,45 +56,15 @@
 
 .Github {
 	border: solid 4px var(--github);
-	background-color: var(--github);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+	transition: 0.3s;
 }
 .LinkedIn {
 	border: solid 4px var(--linkedin);
-	background-color: var(--linkedin);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+	transition: 0.3s;
 }
 .Mail {
 	border: solid 4px var(--mail);
-	background-color: var(--mail);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+	transition: 0.3s;
 }
 
-.Wiki,
-.Random,
-.Akinator,
-.Typeracer {
-	border: solid 4px var(--featured);
-	background-color: var(--featured);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
-}
+/* Start */
