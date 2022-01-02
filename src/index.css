@@ -1,12 +1,6 @@
-:root {
-	--website: #043aa5;
-	--github: #bbbbbb;
-	--linkedin: #0077c2;
-	--mail: #bb001b;
-}
-
 body {
 	background-color: #111;
+	color: white;
 	margin: 0;
 	padding: 0;
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -17,10 +11,9 @@ body {
 
 main {
 	height: 100vh;
-	display: -ms-grid;
-	display: grid;
-	grid-template-columns: 4% 92% 4%;
-	grid-template-rows: 1fr;
+	max-width: 50em;
+	margin: 0 auto;
+	padding: 1rem 0;
 }
 
 .img {
@@ -51,15 +44,7 @@ h1 {
 
 p {
 	color: #aaa;
-	margin-bottom: 3rem;
 	font-size: 1.2em;
-}
-
-.middle {
-	color: white;
-	grid-column: 2/3;
-	justify-self: center;
-	align-self: center;
 }
 
 .main {
@@ -70,6 +55,7 @@ p {
 .col1 {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	width: 100%;
 }
 
@@ -81,91 +67,22 @@ a {
 	color: white;
 	margin: 8px 0px;
 	padding: 15px 4px;
-	width: 100%;
+	width: 90%;
 	font-size: 1.5em;
 }
 
-.Website {
-	border: solid 4px var(--website);
-	background-color: var(--website);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
-}
-.Github {
-	border: solid 4px var(--github);
-	background-color: var(--github);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
-}
-.LinkedIn {
-	border: solid 4px var(--linkedin);
-	background-color: var(--linkedin);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
-}
-.Mail {
-	border: solid 4px var(--mail);
-	background-color: var(--mail);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-	color: inherit;
-	transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
-		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+h2 {
+	margin: 30px 0 0 0;
 }
 
-.Website:hover {
-	background-color: var(--website);
+.link-underline {
+	width: 70px;
+	border-bottom: 5px solid #043aa5;
+	margin: 5px 0 30px 0;
 }
 
-.Github:hover {
-	background-color: var(--github);
-}
-
-.LinkedIn:hover {
-	background-color: var(--linkedin);
-}
-
-.Mail:hover {
-	background-color: var(--mail);
-}
-
-@media screen and (max-width: 680px) {
-	a {
-		width: 90%;
-		align-self: center;
-	}
-}
-@media screen and (max-width: 570px) {
-	main {
-		grid-template-columns: 1% 98% 1%;
-	}
-	h1,
-	p {
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 430px) {
-	h1 {
-		font-size: 2.7rem;
-	}
-}
-
-@media screen and (max-width: 350px) {
-	h1 {
-		font-size: 2.4rem;
-	}
+.project-underline {
+	width: 230px;
+	border-bottom: 5px solid #ffd700;
+	margin: 5px 0 30px 0;
 }
