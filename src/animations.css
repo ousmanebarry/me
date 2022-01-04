@@ -1,70 +1,73 @@
 :root {
-	--website: #043aa5;
+	--website: #0070f3;
 	--github: #bbbbbb;
 	--linkedin: #0077c2;
 	--mail: #bb001b;
 	--featured: #ffd700;
 }
 
-.Random {
-	border: solid 4px var(--featured);
-	transition: 0.3s;
-}
-
-.Random:hover {
-	background-color: var(--featured);
-}
-
-.Wiki {
-	border: solid 4px var(--featured);
-	transition: 0.3s;
-}
-
-.Wiki:hover {
-	background-color: var(--featured);
-}
-
-.Akinator {
-	border: solid 4px var(--featured);
-	transition: 0.3s;
-}
-
-.Akinator:hover {
-	background-color: var(--featured);
-}
-
+.Random,
+.Wiki,
+.Akinator,
 .Typeracer {
 	border: solid 4px var(--featured);
-	transition: 0.3s;
+	box-shadow: inset 0 0 0 0 var(--featured);
+	transition: ease-out 0.4s;
 }
 
+.Random:hover,
+.Wiki:hover,
+.Akinator:hover,
 .Typeracer:hover {
-	background-color: var(--featured);
+	box-shadow: inset 40em 0 0 0 var(--featured);
 }
 
-.Github:hover {
-	background-color: var(--github);
+.Portfolio {
+	border: solid 4px var(--website);
+	box-shadow: inset 0 0 0 0 var(--website);
+	transition: ease-out 0.4s;
 }
 
-.LinkedIn:hover {
-	background-color: var(--linkedin);
-}
-
-.Mail:hover {
-	background-color: var(--mail);
+.Portfolio:hover {
+	box-shadow: inset 40em 0 0 0 var(--website);
 }
 
 .Github {
 	border: solid 4px var(--github);
-	transition: 0.3s;
-}
-.LinkedIn {
-	border: solid 4px var(--linkedin);
-	transition: 0.3s;
-}
-.Mail {
-	border: solid 4px var(--mail);
-	transition: 0.3s;
+	box-shadow: inset 0 0 0 0 var(--github);
+	transition: ease-out 0.4s;
 }
 
-/* Start */
+.Github:hover {
+	box-shadow: inset 40em 0 0 0 var(--github);
+}
+
+.LinkedIn {
+	border: solid 4px var(--linkedin);
+	box-shadow: inset 0 0 0 0 var(--linkedin);
+	transition: ease-out 0.4s;
+}
+
+.LinkedIn:hover {
+	box-shadow: inset 40em 0 0 0 var(--linkedin);
+}
+
+.Mail {
+	border: solid 4px var(--mail);
+	box-shadow: inset 0 0 0 0 var(--mail);
+	transition: ease-out 0.4s;
+}
+
+.Mail:hover {
+	box-shadow: inset 40em 0 0 0 var(--mail);
+}
+
+.source-code {
+	position: relative;
+	top: 0;
+	transition: top ease 0.5s;
+}
+
+.source-code:hover {
+	top: -10px;
+}
