@@ -243,3 +243,9 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+
+.captcha {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
