@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Form from './Form';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -24,6 +25,13 @@ export default function Home() {
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
+					<div className={styles.mail}>
+						<Link href='mailto:kegnekobarry822@gmail.com'>
+							<a target='_blank'>
+								<p>Mail</p>
+							</a>
+						</Link>
+					</div>
 					<div className={styles.github}>
 						<Link href='https://github.com/ousmanebarry/'>
 							<a target='_blank'>
@@ -32,7 +40,7 @@ export default function Home() {
 						</Link>
 					</div>
 					<div className={styles.linkedin}>
-						<Link href='https://github.com/ousmanebarry/'>
+						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
 							<a target='_blank'>
 								<p>LinkedIn</p>
 							</a>
