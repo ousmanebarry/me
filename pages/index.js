@@ -39,6 +39,7 @@ export default function Home() {
 					</div>
 					<div className={styles.mail} onClick={checkClicked}>
 						<p>Contact Me</p>
+						{/* <img src='/dropdown.svg' /> */}
 					</div>
 
 					{clicked ? (
