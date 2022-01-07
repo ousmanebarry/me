@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Form from './Form';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
 							src='https://d1fdloi71mui9q.cloudfront.net/Wdb1qBs7RUmJH9r3aefW_vb7D2MMO59tsukL6'
 							alt='Profile'
 							filter='none'
-							class={styles.image}
+							className={styles.image}
 						></img>
 						<h1 className={styles.title}>Ousmane Barry</h1>
 
@@ -28,10 +29,11 @@ export default function Home() {
 					<div className={styles.mail}>
 						<Link href='mailto:kegnekobarry822@gmail.com'>
 							<a target='_blank'>
-								<p>Mail</p>
+								<p>Contact Me</p>
 							</a>
 						</Link>
 					</div>
+					<Form />
 					<div className={styles.github}>
 						<Link href='https://github.com/ousmanebarry/'>
 							<a target='_blank'>
