@@ -172,7 +172,8 @@
 	text-decoration: underline;
 }
 
-.submit {
+.submit,
+.btn {
 	font: inherit;
 	color: inherit;
 	font-weight: bold;
@@ -186,6 +187,19 @@
 	transition: 0.2s ease all;
 }
 
-.submit:hover {
+.submit:hover,
+.btn:hover {
 	background-color: #0077ffd7;
+}
+
+.success p {
+	font: inherit;
+	color: #18e018;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.null {
+	margin-bottom: 16px;
 }
