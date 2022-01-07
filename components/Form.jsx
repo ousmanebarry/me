@@ -8,6 +8,7 @@ export default function Form() {
 	const setSent = useContext(ThemeContext);
 	const [chars, setChars] = useState(0);
 	const [sending, setSending] = useState('Send');
+	const [isOk, setIsOk] = useState(' ');
 	const name = useRef();
 	const email = useRef();
 	const message = useRef();
@@ -30,7 +31,8 @@ export default function Form() {
 			})
 			.catch((err) => {
 				setSent(false);
-				console.log(err);
+				setIsOk('There was an error sending the message, please try again.');
+				return err;
 			});
 	};
 
@@ -89,6 +91,7 @@ export default function Form() {
 					<button type='submit' className={styles.submit}>
 						{sending}
 					</button>
+					<p className={styles.red}>{isOk}</p>
 				</form>
 			</div>
 		</>
