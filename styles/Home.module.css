@@ -194,12 +194,34 @@
 
 .success p {
 	font: inherit;
-	color: #18e018;
+	color: white;
 	font-weight: bold;
 	margin-bottom: 40px;
 	text-align: center;
 }
 
+.success img {
+	margin-right: 5px;
+}
+
 .null {
 	margin-bottom: 16px;
+}
+
+.red {
+	font: inherit;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.mail {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mail img {
+	justify-content: flex-end;
+	align-items: center;
 }
