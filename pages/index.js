@@ -1,10 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Form from './Form';
-import { useState } from 'react';
+import Form from '../components/Form';
+import Success from '../components/Success';
+import Null from '../components/Null';
+import React, { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
+export const ThemeContext = React.createContext();
+
 export default function Home() {
+	const [clicked, setClicked] = useState(false);
+	const [sent, setSent] = useState(false);
+
+	const checkClicked = () => {
+		setClicked(!clicked);
+	};
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -26,14 +37,22 @@ export default function Home() {
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
-					<div className={styles.mail}>
-						<Link href='mailto:kegnekobarry822@gmail.com'>
-							<a target='_blank'>
-								<p>Contact Me</p>
-							</a>
-						</Link>
+					<div className={styles.mail} onClick={checkClicked}>
+						<p>Contact Me</p>
 					</div>
-					<Form />
+
+					{clicked ? (
+						sent ? (
+							<Success btn_close={checkClicked} />
+						) : (
+							<ThemeContext.Provider value={setSent}>
+								<Form />
+							</ThemeContext.Provider>
+						)
+					) : (
+						<Null />
+					)}
+
 					<div className={styles.github}>
 						<Link href='https://github.com/ousmanebarry/'>
 							<a target='_blank'>
