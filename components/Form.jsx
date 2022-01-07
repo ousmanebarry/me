@@ -3,11 +3,9 @@ import { useState, useRef, useContext } from 'react';
 import Link from 'next/link';
 import { init, send } from '@emailjs/browser';
 import { ThemeContext } from '../pages/index';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Form() {
 	const setSent = useContext(ThemeContext);
-	const [captcha, setCaptcha] = useState(false);
 	const [chars, setChars] = useState(0);
 	const [sending, setSending] = useState('Send');
 	const [isOk, setIsOk] = useState(' ');
@@ -17,31 +15,26 @@ export default function Form() {
 
 	init('user_o2VIQChdqW6GlI6yDoXaU');
 
-	const handleCaptcha = () => {
-		setCaptcha(true);
-	};
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (captcha === true) {
-			setSending('Sending...');
-			send('service_og1y08w', 'template_79s52rc', {
-				to_name: 'Ousmane Barry',
-				from_name: name.current.value,
-				message: `Name : ${name.current.value}|
+
+		setSending('Sending...');
+		send('service_og1y08w', 'template_79s52rc', {
+			to_name: 'Ousmane Barry',
+			from_name: name.current.value,
+			message: `Name : ${name.current.value}|
 				Email : ${email.current.value}|
 				Message : ${message.current.value}`,
+		})
+			.then((res) => {
+				setSent(true);
+				return res;
 			})
-				.then((res) => {
-					setSent(true);
-					return res;
-				})
-				.catch((err) => {
-					setSent(false);
-					setIsOk('There was an error sending the message, please try again.');
-					return err;
-				});
-		}
+			.catch((err) => {
+				setSent(false);
+				setIsOk('There was an error sending the message, please try again.');
+				return err;
+			});
 	};
 
 	return (
@@ -81,12 +74,6 @@ export default function Form() {
 					></textarea>
 
 					<p className={styles.chars_count}>{500 - chars} characters left</p>
-
-					<ReCAPTCHA
-						sitekey='6LfEs_kdAAAAACRvbHqTirFuK27A6b258gRg5hJo'
-						onChange={handleCaptcha}
-						className={styles.captcha}
-					/>
 
 					<div className={styles.consent_div}>
 						<p className={styles.consent}>
