@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Form from '../components/Form';
 import Success from '../components/Success';
 import Null from '../components/Null';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from '../styles/Home.module.css';
 
 export const ThemeContext = React.createContext();
@@ -11,9 +11,15 @@ export const ThemeContext = React.createContext();
 export default function Home() {
 	const [clicked, setClicked] = useState(false);
 	const [sent, setSent] = useState(false);
+	const effect = useRef();
 
 	const checkClicked = () => {
 		setClicked(!clicked);
+		if (!clicked) {
+			effect.current.classList.add(styles.effect);
+		} else {
+			effect.current.classList.remove(styles.effect);
+		}
 	};
 
 	return (
@@ -37,7 +43,7 @@ export default function Home() {
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
-					<div className={styles.mail} onClick={checkClicked}>
+					<div className={styles.mail} ref={effect} onClick={checkClicked}>
 						<p>Contact Me</p>
 						{/* <img src='/dropdown.svg' /> */}
 					</div>
