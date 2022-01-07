@@ -45,24 +45,37 @@
 	filter: none;
 }
 
-/* Now */
 .github,
-.linkedin {
+.linkedin,
+.mail {
+	color: black;
+	font-size: large;
+	font-weight: 500;
 	width: 100%;
+	background-color: white;
+	transition: 0.2s;
 	border: solid 2px white;
 	margin-bottom: 16px;
-}
-
-.github,
-.linkedin {
 	text-align: center;
 }
 
-.github,
-.linkedin p {
-	font-size: large;
+.mail:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #111;
 }
-/* End */
+
+.github:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #111;
+}
+
+.linkedin:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #111;
+}
 
 .title {
 	margin: 0;
@@ -81,11 +94,6 @@
 	font-size: 1.3rem;
 }
 
-.code {
-	background: #28282b;
-	border-radius: 5px;
-	padding: 0.75rem;
-	font-size: 1.1rem;
-	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-		Bitstream Vera Sans Mono, Courier New, monospace;
-}
+/* .fields {
+	margin: 24px 20px;
+} */
