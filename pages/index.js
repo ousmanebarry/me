@@ -11,15 +11,26 @@ export const ThemeContext = React.createContext();
 
 export default function Home() {
 	const [clickedMail, setClickedMail] = useState(false);
+	const [clickedGithub, setClickedGithub] = useState(false);
 	const [sent, setSent] = useState(false);
 	const effectMail = useRef();
+	const effectGithub = useRef();
 
 	const checkMailClicked = () => {
 		setClickedMail(!clickedMail);
 		if (!clickedMail) {
-			effectMail.current.classList.add(styles.effectMail);
+			effectMail.current.classList.add(styles.effect);
 		} else {
-			effectMail.current.classList.remove(styles.effectMail);
+			effectMail.current.classList.remove(styles.effect);
+		}
+	};
+
+	const checkGithubClicked = () => {
+		setClickedGithub(!clickedGithub);
+		if (!clickedGithub) {
+			effectGithub.current.classList.add(styles.effect);
+		} else {
+			effectGithub.current.classList.remove(styles.effect);
 		}
 	};
 
@@ -44,6 +55,18 @@ export default function Home() {
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
+
+					<div
+						className={styles.github}
+						onClick={checkGithubClicked}
+						ref={effectGithub}
+					>
+						<p>Github</p>
+						<img src='/dropdown.svg' alt='dropdown icon' />
+					</div>
+
+					{clickedGithub ? <Repos /> : <Null />}
+
 					<div
 						className={styles.mail}
 						ref={effectMail}
@@ -68,17 +91,6 @@ export default function Home() {
 					) : (
 						<Null />
 					)}
-
-					<div className={styles.github}>
-						<Link href='https://github.com/ousmanebarry/'>
-							<a target='_blank'>
-								<p>Github</p>
-							</a>
-						</Link>
-						<img src='/dropdown.svg' alt='dropdown icon' />
-					</div>
-
-					<Repos />
 
 					<div className={styles.linkedin}>
 						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
