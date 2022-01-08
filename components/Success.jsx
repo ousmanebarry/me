@@ -5,7 +5,9 @@ export default function Success({ btn_close }) {
 		<div className={styles.fields}>
 			<div className={styles.success}>
 				<p>
-					<span>{/* <img src='/checkmark.svg' alt='' /> */}</span>
+					<span>
+						<img src='/checkmark.svg' alt='checkmark icon' />
+					</span>
 					Message was successfully sent!
 				</p>
 			</div>
