@@ -59,7 +59,8 @@
 	text-align: center;
 }
 
-.mail {
+.mail,
+.github {
 	margin-bottom: 0;
 }
 
@@ -98,9 +99,10 @@
 	font-size: 1.3rem;
 }
 
-/* Start here */
-
 .fields {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-bottom: 16px;
 	margin-top: 0;
 	padding: 24px 20px;
@@ -108,6 +110,7 @@
 	border-right: 2px solid #39e09b;
 	border-left: 2px solid #39e09b;
 	border-bottom: 2px solid #39e09b;
+	max-height: fit-content;
 }
 
 .name,
@@ -128,7 +131,7 @@
 
 .message {
 	font: inherit;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 17px;
 	resize: vertical;
 	max-width: 100%;
@@ -162,7 +165,7 @@
 }
 
 .consent {
-	width: 70%;
+	width: 85%;
 	line-height: 1.6;
 	text-align: center;
 	margin-bottom: 36px;
@@ -175,6 +178,7 @@
 
 .btn {
 	background-color: #111821;
+	margin-bottom: 16px;
 }
 
 .submit {
@@ -195,8 +199,13 @@
 	transition: 0.2s ease all;
 }
 
-.effect {
+.effectMail {
 	background-color: white;
+	color: #000000;
+	border-bottom: solid 1px #d7dce1;
+}
+
+.effectMail:hover {
 	color: #000000;
 }
 
@@ -212,14 +221,16 @@
 .success p {
 	font: inherit;
 	font-size: 20px;
-	color: #00d775;
+	color: #000000;
 	font-weight: 600;
 	margin-bottom: 40px;
 	text-align: center;
 }
 
 .success img {
-	margin-right: 5px;
+	position: relative;
+	margin-right: 10px;
+	top: 2px;
 }
 
 .null {
@@ -233,13 +244,86 @@
 	text-align: center;
 }
 
-.mail {
+.mail,
+.github {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.mail img {
+.mail img,
+.github img {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+/* Start */
+
+.repo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: solid 1.5px #d0d7de;
+	margin-bottom: 16px;
+	padding: 15px 15px;
+	width: 370px;
+	height: 130px;
+	border-radius: 8px;
+}
+
+.repo a {
+	font: inherit;
+	font-weight: 600;
+	color: #2a7ddf;
+}
+
+.repo a:hover {
+	text-decoration: underline;
+}
+
+.repo span {
+	font: inherit;
+	color: #57606a;
+	border: solid 1.8px #d0d7de;
+	border-radius: 20px;
+	margin-left: 8px;
+	padding: 2px 8px;
+}
+
+.bottom {
+	display: flex;
+}
+
+.bottom p {
+	font: inherit;
+	margin: 0;
+}
+
+.bubble {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.top {
+	display: flex;
+}
+
+.book {
+	align-self: center;
+	margin-right: 5px;
+}
+
+.star,
+.fork {
+	align-self: center;
+	margin-left: 15px;
 }
