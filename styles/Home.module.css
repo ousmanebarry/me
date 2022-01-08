@@ -199,13 +199,13 @@
 	transition: 0.2s ease all;
 }
 
-.effectMail {
+.effect {
 	background-color: white;
 	color: #000000;
 	border-bottom: solid 1px #d7dce1;
 }
 
-.effectMail:hover {
+.effect:hover {
 	color: #000000;
 }
 
@@ -262,8 +262,6 @@
 	justify-content: flex-end;
 	align-items: center;
 }
-
-/* Start */
 
 .repo {
 	display: flex;
@@ -326,4 +324,12 @@
 .fork {
 	align-self: center;
 	margin-left: 15px;
+}
+
+.btn_seemore {
+	width: 100%;
+	margin-top: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
