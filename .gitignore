@@ -37,3 +37,6 @@ yarn-error.log*
 /.firebase
 .firebaserc
 firebase.json
+
+# other
+.env
