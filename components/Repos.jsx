@@ -40,6 +40,12 @@ export default function Repos() {
 					</div>
 				);
 			})}
+
+			<Link href='https://github.com/ousmanebarry/'>
+				<a target='_blank' className={`${styles.btn} ${styles.btn_seemore}`}>
+					Click here to see more on my github
+				</a>
+			</Link>
 		</div>
 	);
 }
