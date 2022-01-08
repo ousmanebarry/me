@@ -137,13 +137,10 @@
 	max-width: 100%;
 	min-height: 200px;
 	height: 200px;
-	max-height: 400px;
+	max-height: 500px;
 	margin-bottom: 5px;
-}
-
-.message::placeholder {
-	line-height: normal;
-	margin-top: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .message::placeholder,
@@ -286,6 +283,9 @@
 }
 
 .repo span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font: inherit;
 	color: #57606a;
 	border: solid 1.8px #d0d7de;
