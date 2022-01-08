@@ -22,8 +22,8 @@ export default function Form() {
 		send('service_og1y08w', 'template_79s52rc', {
 			to_name: 'Ousmane Barry',
 			from_name: name.current.value,
-			message: `Name : ${name.current.value}|
-				Email : ${email.current.value}|
+			message: `Name : ${name.current.value}\n
+				Email : ${email.current.value}\n
 				Message : ${message.current.value}`,
 		})
 			.then((res) => {
@@ -64,7 +64,7 @@ export default function Form() {
 					<textarea
 						name='message'
 						placeholder='Message*'
-						maxLength='500'
+						maxLength='700'
 						type='text'
 						className={styles.message}
 						ref={message}
@@ -73,7 +73,7 @@ export default function Form() {
 						required
 					></textarea>
 
-					<p className={styles.chars_count}>{500 - chars} characters left</p>
+					<p className={styles.chars_count}>{700 - chars} characters left</p>
 
 					<div className={styles.consent_div}>
 						<p className={styles.consent}>
