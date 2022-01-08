@@ -64,5 +64,27 @@
 		"stars": "0",
 		"forks": "0",
 		"color": "#f1e05a"
+	},
+	{
+		"id": 6,
+		"owner": "ousmanebarry",
+		"repo": "me",
+		"link": "https://github.com/ousmanebarry/me",
+		"description": "",
+		"language": "JavaScript",
+		"stars": "0",
+		"forks": "0",
+		"color": "#f1e05a"
+	},
+	{
+		"id": 7,
+		"owner": "ousmanebarry",
+		"repo": "youtube-video-downloader",
+		"link": "https://github.com/ousmanebarry/youtube-video-downloader",
+		"description": "",
+		"language": "Python",
+		"stars": "1",
+		"forks": "0",
+		"color": "#3572a5"
 	}
 ]
