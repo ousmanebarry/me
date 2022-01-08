@@ -6,6 +6,7 @@ import Null from '../components/Null';
 import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
 import styles from '../styles/Home.module.css';
+import { Icon } from '@iconify/react';
 
 export const ThemeContext = React.createContext();
 
@@ -16,21 +17,13 @@ export default function Home() {
 	const effectMail = useRef();
 	const effectGithub = useRef();
 
-	const checkMailClicked = () => {
-		setClickedMail(!clickedMail);
-		if (!clickedMail) {
-			effectMail.current.classList.add(styles.effect);
+	const checkClicked = (btn) => {
+		if (btn === 'github') {
+			setClickedGithub(!clickedGithub);
+			effectGithub.current.classList.toggle(styles.effect);
 		} else {
-			effectMail.current.classList.remove(styles.effect);
-		}
-	};
-
-	const checkGithubClicked = () => {
-		setClickedGithub(!clickedGithub);
-		if (!clickedGithub) {
-			effectGithub.current.classList.add(styles.effect);
-		} else {
-			effectGithub.current.classList.remove(styles.effect);
+			setClickedMail(!clickedMail);
+			effectMail.current.classList.toggle(styles.effect);
 		}
 	};
 
@@ -44,7 +37,7 @@ export default function Home() {
 				<main className={styles.main}>
 					<div className={styles.head}>
 						<img
-							src='https://d1fdloi71mui9q.cloudfront.net/Wdb1qBs7RUmJH9r3aefW_vb7D2MMO59tsukL6'
+							src='/profile.jpg'
 							alt='Profile'
 							filter='none'
 							className={styles.image}
@@ -58,7 +51,7 @@ export default function Home() {
 
 					<div
 						className={styles.github}
-						onClick={checkGithubClicked}
+						onClick={() => checkClicked('github')}
 						ref={effectGithub}
 					>
 						<p>Github</p>
@@ -70,7 +63,7 @@ export default function Home() {
 					<div
 						className={styles.mail}
 						ref={effectMail}
-						onClick={checkMailClicked}
+						onClick={() => checkClicked('mail')}
 					>
 						<p>Contact Me</p>
 						<img
@@ -82,7 +75,7 @@ export default function Home() {
 
 					{clickedMail ? (
 						sent ? (
-							<Success btn_close={checkMailClicked} />
+							<Success btn_close={() => checkClicked('mail')} />
 						) : (
 							<ThemeContext.Provider value={setSent}>
 								<Form />
