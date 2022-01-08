@@ -3,22 +3,23 @@ import Link from 'next/link';
 import Form from '../components/Form';
 import Success from '../components/Success';
 import Null from '../components/Null';
+import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
 import styles from '../styles/Home.module.css';
 
 export const ThemeContext = React.createContext();
 
 export default function Home() {
-	const [clicked, setClicked] = useState(false);
+	const [clickedMail, setClickedMail] = useState(false);
 	const [sent, setSent] = useState(false);
-	const effect = useRef();
+	const effectMail = useRef();
 
-	const checkClicked = () => {
-		setClicked(!clicked);
-		if (!clicked) {
-			effect.current.classList.add(styles.effect);
+	const checkMailClicked = () => {
+		setClickedMail(!clickedMail);
+		if (!clickedMail) {
+			effectMail.current.classList.add(styles.effectMail);
 		} else {
-			effect.current.classList.remove(styles.effect);
+			effectMail.current.classList.remove(styles.effectMail);
 		}
 	};
 
@@ -43,14 +44,22 @@ export default function Home() {
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
-					<div className={styles.mail} ref={effect} onClick={checkClicked}>
+					<div
+						className={styles.mail}
+						ref={effectMail}
+						onClick={checkMailClicked}
+					>
 						<p>Contact Me</p>
-						{/* <img src='/dropdown.svg' /> */}
+						<img
+							src='/dropdown.svg'
+							alt='dropdown icon'
+							className={styles.dropdown}
+						/>
 					</div>
 
-					{clicked ? (
+					{clickedMail ? (
 						sent ? (
-							<Success btn_close={checkClicked} />
+							<Success btn_close={checkMailClicked} />
 						) : (
 							<ThemeContext.Provider value={setSent}>
 								<Form />
@@ -66,7 +75,11 @@ export default function Home() {
 								<p>Github</p>
 							</a>
 						</Link>
+						<img src='/dropdown.svg' alt='dropdown icon' />
 					</div>
+
+					<Repos />
+
 					<div className={styles.linkedin}>
 						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
 							<a target='_blank'>
