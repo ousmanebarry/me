@@ -49,16 +49,18 @@ export default function Form() {
 						className={styles.name}
 						ref={name}
 						autoComplete='off'
+						maxLength='70'
 						required
 					></input>
 
 					<input
 						name='email'
 						placeholder='Email address*'
-						type='text'
+						type='email'
 						className={styles.email}
 						ref={email}
 						autoComplete='off'
+						maxLength='64'
 						required
 					></input>
 
