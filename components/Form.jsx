@@ -1,7 +1,8 @@
 import styles from '../styles/Home.module.css';
 import { useState, useRef, useContext } from 'react';
 import Link from 'next/link';
-import { init, send } from '@emailjs/browser';
+// import { init, send } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { ThemeContext } from '../pages/index';
 
 export default function Form() {
@@ -9,29 +10,29 @@ export default function Form() {
 	const [chars, setChars] = useState(0);
 	const [sending, setSending] = useState('Send');
 	const [isOk, setIsOk] = useState(' ');
+	const form = useRef();
 	const name = useRef();
 	const email = useRef();
 	const message = useRef();
-
-	init('user_o2VIQChdqW6GlI6yDoXaU');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		setSending('Sending...');
-		send('service_og1y08w', 'template_79s52rc', {
-			to_name: 'Ousmane Barry',
-			from_name: name.current.value,
-			message: `Name : ${name.current.value}\n
-				Email : ${email.current.value}\n
-				Message : ${message.current.value}`,
-		})
+		emailjs
+			.sendForm(
+				'service_og1y08w',
+				'template_79s52rc',
+				form.current,
+				'user_o2VIQChdqW6GlI6yDoXaU'
+			)
 			.then((res) => {
 				setSent(true);
 				return res;
 			})
 			.catch((err) => {
 				setSent(false);
+				setSending('Send');
 				setIsOk('There was an error sending the message, please try again.');
 				return err;
 			});
@@ -40,7 +41,7 @@ export default function Form() {
 	return (
 		<>
 			<div className={styles.fields}>
-				<form onSubmit={handleSubmit}>
+				<form ref={form} onSubmit={handleSubmit}>
 					<input
 						name='name'
 						placeholder='Full name*'
