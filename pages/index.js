@@ -85,6 +85,14 @@ export default function Home() {
 						<Null />
 					)}
 
+					<div className={styles.portfolio}>
+						<Link href='https://ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Portfolio</p>
+							</a>
+						</Link>
+					</div>
+
 					<div className={styles.linkedin}>
 						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
 							<a target='_blank'>
