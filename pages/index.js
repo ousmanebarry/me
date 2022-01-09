@@ -6,7 +6,6 @@ import Null from '../components/Null';
 import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
 import styles from '../styles/Home.module.css';
-import { Icon } from '@iconify/react';
 
 export const ThemeContext = React.createContext();
 
