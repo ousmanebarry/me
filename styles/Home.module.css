@@ -244,22 +244,35 @@
 }
 
 .mail,
-.github {
+.github,
+.portfolio,
+.linkedin {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.mail img,
-.github img {
-	width: 60px;
-	height: 60px;
+.linkedin a,
+.portfolio a {
+	width: 100%;
+}
+
+.external {
+	width: 25px;
+	height: 25px;
+}
+
+.arrow_down {
+	width: 30px;
+	height: 30px;
+}
+
+.external,
+.arrow_down {
 	position: absolute;
-	top: 0px;
-	right: 0px;
-	justify-content: flex-end;
-	align-items: center;
+	top: 30%;
+	right: 20px;
 }
 
 .repo {
