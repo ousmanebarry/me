@@ -5,6 +5,7 @@ import Success from '../components/Success';
 import Null from '../components/Null';
 import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
+import { Icon } from '@iconify/react';
 import styles from '../styles/Home.module.css';
 
 export const ThemeContext = React.createContext();
@@ -54,7 +55,7 @@ export default function Home() {
 						ref={effectGithub}
 					>
 						<p>Github</p>
-						<img src='/dropdown.svg' alt='dropdown icon' />
+						<Icon className={styles.arrow_down} icon='il:arrow-down' />
 					</div>
 
 					{clickedGithub ? <Repos /> : <Null />}
@@ -65,12 +66,10 @@ export default function Home() {
 						onClick={() => checkClicked('mail')}
 					>
 						<p>Contact Me</p>
-						<img
-							src='/dropdown.svg'
-							alt='dropdown icon'
-							className={styles.dropdown}
-						/>
+						<Icon className={styles.arrow_down} icon='il:arrow-down' />
 					</div>
+
+					<Success />
 
 					{clickedMail ? (
 						sent ? (
@@ -88,6 +87,10 @@ export default function Home() {
 						<Link href='https://ousmanebarry.ca/'>
 							<a target='_blank'>
 								<p>Portfolio</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
 							</a>
 						</Link>
 					</div>
@@ -96,6 +99,10 @@ export default function Home() {
 						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
 							<a target='_blank'>
 								<p>LinkedIn</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
 							</a>
 						</Link>
 					</div>
