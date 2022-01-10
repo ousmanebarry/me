@@ -69,8 +69,6 @@ export default function Home() {
 						<Icon className={styles.arrow_down} icon='il:arrow-down' />
 					</div>
 
-					<Success />
-
 					{clickedMail ? (
 						sent ? (
 							<Success btn_close={() => checkClicked('mail')} />
