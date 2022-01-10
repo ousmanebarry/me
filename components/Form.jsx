@@ -1,7 +1,6 @@
 import styles from '../styles/Home.module.css';
 import { useState, useRef, useContext } from 'react';
 import Link from 'next/link';
-// import { init, send } from '@emailjs/browser';
 import emailjs from '@emailjs/browser';
 import { ThemeContext } from '../pages/index';
 
