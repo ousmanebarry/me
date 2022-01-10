@@ -83,8 +83,8 @@ export default function Form() {
 							Ousmane Barry who may contact you. You can alternatively send me
 							an email at{' '}
 							<span>
-								<Link href='mailto:kegnekobarry822@gmail.com'>
-									kegnekobarry822@gmail.com
+								<Link href='mailto:contact@ousmanebarry.ca'>
+									contact@ousmanebarry.ca
 								</Link>
 							</span>
 							.
