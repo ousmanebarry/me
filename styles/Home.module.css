@@ -47,6 +47,7 @@
 
 .github,
 .linkedin,
+.resume,
 .mail,
 .portfolio {
 	color: white;
@@ -78,6 +79,7 @@
 }
 
 .linkedin:hover,
+.resume:hover,
 .portfolio:hover {
 	cursor: pointer;
 	color: #0070f3;
@@ -246,7 +248,8 @@
 .mail,
 .github,
 .portfolio,
-.linkedin {
+.linkedin,
+.resume {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -254,6 +257,7 @@
 }
 
 .linkedin a,
+.resume a,
 .portfolio a {
 	width: 100%;
 }

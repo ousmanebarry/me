@@ -104,6 +104,18 @@ export default function Home() {
 							</a>
 						</Link>
 					</div>
+
+					<div className={styles.resume}>
+						<Link href='https://resume.ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Resume</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
 				</main>
 			</div>
 		</div>
