@@ -49,6 +49,42 @@ export default function Home() {
 						</p>
 					</div>
 
+					<div className={styles.portfolio}>
+						<Link href='https://ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Portfolio</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
+
+					<div className={styles.resume}>
+						<Link href='https://resume.ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Resume</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
+
+					<div className={styles.linkedin}>
+						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
+							<a target='_blank'>
+								<p>LinkedIn</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
+
 					<div
 						className={styles.github}
 						onClick={() => checkClicked('github')}
@@ -80,42 +116,6 @@ export default function Home() {
 					) : (
 						<Null />
 					)}
-
-					<div className={styles.portfolio}>
-						<Link href='https://ousmanebarry.ca/'>
-							<a target='_blank'>
-								<p>Portfolio</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div>
-
-					<div className={styles.linkedin}>
-						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
-							<a target='_blank'>
-								<p>LinkedIn</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div>
-
-					<div className={styles.resume}>
-						<Link href='https://resume.ousmanebarry.ca/'>
-							<a target='_blank'>
-								<p>Resume</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div>
 				</main>
 			</div>
 		</div>
