@@ -38,11 +38,10 @@
 
 .image {
 	border-radius: 50%;
-	width: 96px;
-	height: 96px;
+	/* width: 96px;
+	height: 96px; */
 	justify-content: center;
 	margin-bottom: 16px;
-	filter: none;
 }
 
 .github,
@@ -228,9 +227,9 @@
 	text-align: center;
 }
 
-.success img {
+.success_img {
 	position: relative;
-	margin-right: 10px;
+	margin-right: 15px;
 	top: 2px;
 }
 

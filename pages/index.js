@@ -7,6 +7,7 @@ import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 
 export const ThemeContext = React.createContext();
 
@@ -36,18 +37,21 @@ export default function Home() {
 			<div className={styles.box}>
 				<main className={styles.main}>
 					<div className={styles.head}>
-						<img
+						<Image
 							src='/profile.jpg'
 							alt='Profile'
-							filter='none'
 							className={styles.image}
-						></img>
+							width='96px'
+							height='96px'
+						></Image>
 						<h1 className={styles.title}>Ousmane Barry</h1>
 
 						<p className={styles.description}>
 							Software Engineering Student at the University of Ottawa
 						</p>
 					</div>
+
+					<Success />
 
 					<div className={styles.portfolio}>
 						<Link href='https://ousmanebarry.ca/'>
