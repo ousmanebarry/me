@@ -7,7 +7,6 @@ import Repos from '../components/Repos';
 import React, { useState, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import styles from '../styles/Home.module.css';
-import Image from 'next/image';
 
 export const ThemeContext = React.createContext();
 
@@ -37,13 +36,11 @@ export default function Home() {
 			<div className={styles.box}>
 				<main className={styles.main}>
 					<div className={styles.head}>
-						<Image
+						<img
 							src='/profile.jpg'
 							alt='Profile'
 							className={styles.image}
-							width='96px'
-							height='96px'
-						></Image>
+						></img>
 						<h1 className={styles.title}>Ousmane Barry</h1>
 
 						<p className={styles.description}>
@@ -51,19 +48,7 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className={styles.portfolio}>
-						<Link href='https://ousmanebarry.ca/'>
-							<a target='_blank'>
-								<p>Portfolio</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div>
-
-					<div className={styles.resume}>
+					{/* <div className={styles.resume}>
 						<Link href='https://resume.ousmanebarry.ca/'>
 							<a target='_blank'>
 								<p>Resume</p>
@@ -73,19 +58,7 @@ export default function Home() {
 								/>
 							</a>
 						</Link>
-					</div>
-
-					<div className={styles.linkedin}>
-						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
-							<a target='_blank'>
-								<p>LinkedIn</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div>
+					</div> */}
 
 					<div
 						className={styles.github}
@@ -118,6 +91,30 @@ export default function Home() {
 					) : (
 						<Null />
 					)}
+
+					<div className={styles.portfolio}>
+						<Link href='https://ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Portfolio</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
+
+					<div className={styles.linkedin}>
+						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
+							<a target='_blank'>
+								<p>LinkedIn</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
+					</div>
 				</main>
 			</div>
 		</div>
