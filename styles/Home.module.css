@@ -38,8 +38,8 @@
 
 .image {
 	border-radius: 50%;
-	/* width: 96px;
-	height: 96px; */
+	width: 96px;
+	height: 96px;
 	justify-content: center;
 	margin-bottom: 16px;
 }
@@ -227,7 +227,7 @@
 	text-align: center;
 }
 
-.success_img {
+.success img {
 	position: relative;
 	margin-right: 15px;
 	top: 2px;
