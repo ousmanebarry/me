@@ -20,10 +20,10 @@ export default function Form() {
 		setSending('Sending...');
 		emailjs
 			.sendForm(
-				'service_og1y08w',
-				'template_79s52rc',
+				process.env.NEXT_PUBLIC_SERVICE || 'service',
+				process.env.NEXT_PUBLIC_TEMPLATE || 'template',
 				form.current,
-				'user_o2VIQChdqW6GlI6yDoXaU'
+				process.env.NEXT_PUBLIC_USER_ID || 'user_id'
 			)
 			.then((res) => {
 				setSent(true);
