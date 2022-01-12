@@ -51,8 +51,6 @@ export default function Home() {
 						</p>
 					</div>
 
-					<Success />
-
 					<div className={styles.portfolio}>
 						<Link href='https://ousmanebarry.ca/'>
 							<a target='_blank'>
