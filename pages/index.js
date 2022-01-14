@@ -48,18 +48,6 @@ export default function Home() {
 						</p>
 					</div>
 
-					{/* <div className={styles.resume}>
-						<Link href='https://resume.ousmanebarry.ca/'>
-							<a target='_blank'>
-								<p>Resume</p>
-								<Icon
-									className={styles.external}
-									icon='fa-solid:external-link-alt'
-								/>
-							</a>
-						</Link>
-					</div> */}
-
 					<div
 						className={styles.github}
 						onClick={() => checkClicked('github')}
@@ -71,26 +59,17 @@ export default function Home() {
 
 					{clickedGithub ? <Repos /> : <Null />}
 
-					<div
-						className={styles.mail}
-						ref={effectMail}
-						onClick={() => checkClicked('mail')}
-					>
-						<p>Contact Me</p>
-						<Icon className={styles.arrow_down} icon='il:arrow-down' />
+					<div className={styles.resume}>
+						<Link href='https://resume.ousmanebarry.ca/'>
+							<a target='_blank'>
+								<p>Resume</p>
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
+							</a>
+						</Link>
 					</div>
-
-					{clickedMail ? (
-						sent ? (
-							<Success btn_close={() => checkClicked('mail')} />
-						) : (
-							<ThemeContext.Provider value={setSent}>
-								<Form />
-							</ThemeContext.Provider>
-						)
-					) : (
-						<Null />
-					)}
 
 					<div className={styles.portfolio}>
 						<Link href='https://ousmanebarry.ca/'>
@@ -115,6 +94,27 @@ export default function Home() {
 							</a>
 						</Link>
 					</div>
+
+					<div
+						className={styles.mail}
+						ref={effectMail}
+						onClick={() => checkClicked('mail')}
+					>
+						<p>Contact Me</p>
+						<Icon className={styles.arrow_down} icon='il:arrow-down' />
+					</div>
+
+					{clickedMail ? (
+						sent ? (
+							<Success btn_close={() => checkClicked('mail')} />
+						) : (
+							<ThemeContext.Provider value={setSent}>
+								<Form />
+							</ThemeContext.Provider>
+						)
+					) : (
+						<Null />
+					)}
 				</main>
 			</div>
 		</div>
