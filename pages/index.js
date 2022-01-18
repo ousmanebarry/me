@@ -60,7 +60,7 @@ export default function Home() {
 					{clickedGithub ? <Repos /> : <Null />}
 
 					<div className={styles.resume}>
-						<Link href='https://resume.ousmanebarry.ca/'>
+						<Link href='https://docs.google.com/document/d/1wx_wr2pYjrbh14F6-8p0AXFG-qCCVI7WFYoSdtaPRQI/edit?usp=sharing'>
 							<a target='_blank'>
 								<p>Resume</p>
 								<Icon
