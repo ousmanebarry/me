@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from '../styles/Home.module.css';
 
 export default function Success({ btn_close }) {

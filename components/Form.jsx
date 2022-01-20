@@ -79,13 +79,10 @@ export default function Form() {
 
 					<div className={styles.consent_div}>
 						<p className={styles.consent}>
-							By submitting your contact details, you are providing your data to
-							Ousmane Barry who may contact you. You can alternatively send me
-							an email at{' '}
+							By submitting your contact details, you are providing your data to Ousmane Barry who may contact you. You can alternatively send me an
+							email at{' '}
 							<span>
-								<Link href='mailto:contact@ousmanebarry.ca'>
-									contact@ousmanebarry.ca
-								</Link>
+								<Link href='mailto:contact@ousmanebarry.ca'>contact@ousmanebarry.ca</Link>
 							</span>
 							.
 						</p>
