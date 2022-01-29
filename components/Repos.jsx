@@ -16,11 +16,13 @@ export default function Repos() {
 							</Link>
 							<span className={styles.public}>Public</span>
 						</div>
+						<p>{el.description}</p>
 						<div className={styles.bottom}>
 							<div
 								style={{ backgroundColor: el.color }}
 								className={styles.bubble}
 							></div>
+
 							<p>{el.language}</p>
 
 							{parseInt(el.stars) === 0 ? null : (
