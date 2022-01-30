@@ -37,13 +37,23 @@ export default function Home() {
 			<div className={styles.box}>
 				<main className={styles.main}>
 					<div className={styles.head}>
-						<img src='/profile.jpg' alt='Profile' className={styles.image}></img>
+						<img
+							src='/profile.jpg'
+							alt='Profile'
+							className={styles.image}
+						></img>
 						<h1 className={styles.title}>Ousmane Barry</h1>
 
-						<p className={styles.description}>Software Engineering Student at the University of Ottawa</p>
+						<p className={styles.description}>
+							Software Engineering Student at the University of Ottawa
+						</p>
 					</div>
 
-					<div className={styles.github} onClick={() => checkClicked('github')} ref={effectGithub}>
+					<div
+						className={styles.github}
+						onClick={() => checkClicked('github')}
+						ref={effectGithub}
+					>
 						<p>Github</p>
 						<Icon className={styles.arrow_down} icon='il:arrow-down' />
 					</div>
@@ -51,10 +61,13 @@ export default function Home() {
 					{clickedGithub ? <Repos /> : <Null />}
 
 					<div className={styles.resume}>
-						<Link href='https://docs.google.com/document/d/1wx_wr2pYjrbh14F6-8p0AXFG-qCCVI7WFYoSdtaPRQI/edit?usp=sharing'>
+						<Link href='https://firebasestorage.googleapis.com/v0/b/redirect-links-3a125.appspot.com/o/resume-ousmane%20shared.pdf?alt=media&token=f4214aec-0fe9-46a7-b32b-264e8caf2b78'>
 							<a target='_blank'>
 								<p>Resume</p>
-								<Icon className={styles.external} icon='fa-solid:external-link-alt' />
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
 							</a>
 						</Link>
 					</div>
@@ -63,7 +76,10 @@ export default function Home() {
 						<Link href='https://ousmanebarry.ca/'>
 							<a target='_blank'>
 								<p>Portfolio</p>
-								<Icon className={styles.external} icon='fa-solid:external-link-alt' />
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
 							</a>
 						</Link>
 					</div>
@@ -72,12 +88,19 @@ export default function Home() {
 						<Link href='https://www.linkedin.com/in/barry-ousmane/'>
 							<a target='_blank'>
 								<p>LinkedIn</p>
-								<Icon className={styles.external} icon='fa-solid:external-link-alt' />
+								<Icon
+									className={styles.external}
+									icon='fa-solid:external-link-alt'
+								/>
 							</a>
 						</Link>
 					</div>
 
-					<div className={styles.mail} ref={effectMail} onClick={() => checkClicked('mail')}>
+					<div
+						className={styles.mail}
+						ref={effectMail}
+						onClick={() => checkClicked('mail')}
+					>
 						<p>Contact Me</p>
 						<Icon className={styles.arrow_down} icon='il:arrow-down' />
 					</div>
