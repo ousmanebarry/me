@@ -72,7 +72,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className={styles.portfolio}>
+          {/* <div className={styles.portfolio}>
             <Link href='https://ousmanebarry.ca/'>
               <a target='_blank'>
                 <p>Portfolio</p>
@@ -82,7 +82,7 @@ export default function Home() {
                 />
               </a>
             </Link>
-          </div>
+          </div> */}
 
           <div className={styles.linkedin}>
             <Link href='https://www.linkedin.com/in/barry-ousmane/'>
