@@ -45,7 +45,7 @@ export default function Home() {
             <h1 className={styles.title}>Ousmane Barry</h1>
 
             <p className={styles.description}>
-              Software Engineering Student at the University of Ottawa
+              Computer Science Student at the University of Ottawa
             </p>
           </div>
 
