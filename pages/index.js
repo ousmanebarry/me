@@ -61,7 +61,7 @@ export default function Home() {
           {clickedGithub ? <Repos /> : <Null />}
 
           <div className={styles.resume}>
-            <Link href='https://firebasestorage.googleapis.com/v0/b/redirect-links-3a125.appspot.com/o/Ousmane_Barry_Resume.pdf?alt=media&token=15d27739-f60d-4b8f-b502-dd605cc131fc'>
+            <Link href='https://firebasestorage.googleapis.com/v0/b/redirect-links-3a125.appspot.com/o/Ousmane_Barry_Resume.pdf?alt=media&token=30310982-9769-4d99-89d9-5616b233003e'>
               <a target='_blank'>
                 <p>Resume</p>
                 <Icon
