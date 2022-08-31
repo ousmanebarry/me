@@ -2,8 +2,8 @@
   {
     "id": 8,
     "owner": "ousmanebarry",
-    "repo": "shopify-fe-intern-challenge",
-    "link": "https://github.com/ousmanebarry/shopify-fe-intern-challenge",
+    "repo": "spacestagram",
+    "link": "https://github.com/ousmanebarry/spacestagram",
     "description": "A social media clone but only about space, built with the NASA APOD API.",
     "language": "Javascript",
     "stars": "0",
@@ -68,7 +68,7 @@
   {
     "id": 2,
     "owner": "geegee-connect",
-    "repo": "geegee-connect.github.io",
+    "repo": "geegee-connect",
     "link": "https://github.com/geegee-connect/geegee-connect.github.io",
     "description": "A website for a team project where we came up with a business idea.",
     "language": "HTML",
