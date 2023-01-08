@@ -57,13 +57,13 @@
   {
     "id": 7,
     "owner": "ousmanebarry",
-    "repo": "youtube-video-downloader",
-    "link": "https://github.com/ousmanebarry/youtube-video-downloader",
-    "description": "Download any youtube video in mp4 with the use of this program!",
-    "language": "Python",
-    "stars": "1",
+    "repo": "course-booking-app",
+    "link": "https://github.com/ousmanebarry/course-booking-app",
+    "description": "A course booking app where professors create courses and students enrol into them.",
+    "language": "Java",
+    "stars": "0",
     "forks": "0",
-    "color": "#3572a5"
+    "color": "#b07219"
   },
   {
     "id": 2,
